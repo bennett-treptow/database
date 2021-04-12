@@ -676,6 +676,17 @@ class Blueprint
 
         return $this->addColumn('string', $column, compact('length'));
     }
+    
+    /**
+     * Create a new tiny text column on the table.
+     *
+     * @param  string  $column
+     * @return \Illuminate\Database\Schema\ColumnDefinition
+     */
+    public function tinyText($column)
+    {
+        return $this->addColumn('tinyText', $column);
+    }
 
     /**
      * Create a new text column on the table.
