@@ -489,6 +489,17 @@ class MySqlGrammar extends Grammar
     {
         return "varchar({$column->length})";
     }
+    
+    /**
+     * Create the column definition for a tiny text type.
+     *
+     * @param  \Illuminate\Support\Fluent  $column
+     * @return string
+     */
+    protected function typeTinyText(Fluent $column)
+    {
+        return 'tinytext';
+    }
 
     /**
      * Create the column definition for a text type.
