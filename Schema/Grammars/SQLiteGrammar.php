@@ -431,6 +431,17 @@ class SQLiteGrammar extends Grammar
     {
         return 'varchar';
     }
+    
+    /**
+     * Create the column definition for a tinytext
+     *
+     * @param  \Illuminate\Support\Fluent  $column
+     * @return string
+     */
+    protected function typeTinyText(Fluent $column)
+    {
+        return 'text';
+    }
 
     /**
      * Create the column definition for a text type.
